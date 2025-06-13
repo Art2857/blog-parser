@@ -1,0 +1,22 @@
+{
+  "name": "blog-parser-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm run backend:install && npm run frontend:install",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend && npm install",
+    "backend:dev": "cd backend && npm run docker:local:up && npm run dev",
+    "frontend:dev": "cd frontend && npm run dev"
+  },
+  "author": "Zhuleev Artem",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
